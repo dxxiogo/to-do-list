@@ -1,0 +1,107 @@
+
+.background-new-note{
+    min-height: 110vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.748);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    display: none;
+}
+.background-new-note .new-note{
+    width: 600px;
+    height: 250px;
+    border: 2px solid var(--color1);
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px black;
+    padding: 10px;
+    background-color: var(--color2);
+}
+.new-note #title-box-new-note{
+    max-width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.new-note #title-box-new-note input{
+    height: 40px;
+    margin-top: 8px;
+    max-width: 70%;
+    padding: 10px;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+}
+.new-note .form-checked-box{
+    background: none;
+    margin: 20px 10px;
+    display: flex; 
+    gap: 20px;
+}
+.note-colors{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+    gap: 10px;
+}
+.color-note{
+    height: 20px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var( --color1);
+}
+#color-1{
+    background:none;
+}
+#color-2{
+    background-color: var(--color5);
+
+}
+#color-3{
+    background-color: var(--color4);
+}
+#color-4{
+    background-color: var(--color6);
+}
+
+
+
+.note-btns{
+    margin: 10px 35px 30px 35px;
+    display: flex;
+    justify-content: space-between;
+}
+.note-btns button{
+    font-size: 18px;
+    background: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: var(--color3);
+    border: none;
+    cursor: pointer;
+}
+.note-btns button:hover{
+    color: white;
+}
+#text-note{
+    height: 100px;
+    width: 100%;
+    outline: none;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: white;
+}
+#text-note::placeholder{
+    font-size: 18px;
+    font-weight: 500;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="background-new-note">
+      <div class="new-note">
+        <div id="title-box-new-note">
+          <input type="text" id="title-new-note" placeholder="Title"> 
+          <div class="note-colors">
+            <button id="color-1" class="color-note" data-color="none"></button>
+            <button id="color-2" class="color-note" data-color="#42275e"></button>
+            <button id="color-3"  class="color-note" data-color="#5b2245"></button>
+            <button  id="color-4" class="color-note" data-color="#345920"></button>
+          </div>
+        </div>
+        <div class="form-checked-box">
+          <textarea cols="30" rows="10" style="resize: none;" id="text-note" placeholder="Take a note..."></textarea>
+        </div>
+        <div class="note-btns">
+          <button class="cancel-note">Cancelar</button>
+          <button id="add-note">Adicionar</button>
+        </div>
+      </div>
+    </div>
+      <main class="main-content">
+        <header>
+          <div class="logo">
+            <img src="images/logo-checked.png" alt="Logo checked" id="logo-img">
+            <h2 id="logo-text">List checked</h2>
+          </div>
+          <div class="tags-box">
+            <div class="tag-title">
+              <p>tags</p>
+            </div>
+          </div>
+        </header>
+
+        <section class="created-notes-section">
+          <div class="form-note">
+            <p class="take-new_note"> + Take a new note</p>
+          </div>
+        </section>
+        
+      </main>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
