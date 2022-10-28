@@ -4,11 +4,15 @@ import './css/base.css'
 //Cancela a criação de uma nova nota
 const backgroundNewNote = document.querySelector(".background-new-note");
 
-document.querySelector(".cancel-note").addEventListener("click", () => {
-  backgroundNewNote.style.display = "none";
+function clearInputs(){
   document.querySelector("#text-note").value = "";
   document.querySelector("#title-new-note").value = "";
+}
 
+
+document.querySelector(".cancel-note").addEventListener("click", () => {
+  backgroundNewNote.style.display = "none";
+  clearInputs();
 });
 
 
@@ -18,12 +22,12 @@ document.querySelector(".form-note").addEventListener("click",
 });
 
 
-// const colorNote = document.querySelector(".color-note");
-// console.log(colorNote)
+const colorNote = document.querySelector(".color-note");
+console.log(colorNote)
 
-// colorNote.addEventListener("click", (eve) => {
-//     console.log(eve.currentTarget);
-// });
+colorNote.addEventListener("click", (eve) => {
+  console.log(eve);
+});
 
 const btnAddNote = document.querySelector("#add-note");
 
@@ -40,4 +44,5 @@ btnAddNote.addEventListener("click", () => {
   newNoteAdded.append(newNoteAddedTitle, newNoteAddedText);
   notesCreated.append(newNoteAdded);
   backgroundNewNote.style.display = "none";
+  clearInputs();
 });
