@@ -22,19 +22,15 @@ document.querySelector(".form-note").addEventListener("click",
 });
 
 
-const colorNote = document.querySelector(".color-note");
-console.log(colorNote)
-
-colorNote.addEventListener("click", (eve) => {
-  console.log(eve);
-});
-
 const btnAddNote = document.querySelector("#add-note");
 
 btnAddNote.addEventListener("click", () => {
+  const newNote = document.querySelector(".new-note");
+  const colorCardChosen = getComputedStyle(newNote).backgroundColor;
   const notesCreated = document.querySelector(".created-notes-section");
   const newNoteAdded = document.createElement("div");
   newNoteAdded.className = "added-note";
+  newNoteAdded.style.backgroundColor = colorCardChosen;
   const newNoteAddedTitle = document.createElement("h2");
   newNoteAddedTitle.innerText = document.querySelector("#title-new-note").value;
   newNoteAddedTitle.className = "added-note-title";
@@ -45,4 +41,31 @@ btnAddNote.addEventListener("click", () => {
   notesCreated.append(newNoteAdded);
   backgroundNewNote.style.display = "none";
   clearInputs();
+});
+
+let currentBtn;
+
+document.querySelector("#color-1").addEventListener("click", (eve) => {
+  currentBtn = eve.currentTarget
+  const btnParent = document.querySelector(".new-note");
+  btnParent.style.backgroundColor = currentBtn.dataset.color;
+
+});
+document.querySelector("#color-2").addEventListener("click", (eve) => {
+  currentBtn = eve.currentTarget
+ const btnParent = document.querySelector(".new-note");
+ btnParent.style.backgroundColor = currentBtn.dataset.color;
+
+});
+document.querySelector("#color-3").addEventListener("click", (eve) => {
+  currentBtn = eve.currentTarget
+ const btnParent = document.querySelector(".new-note");
+ btnParent.style.backgroundColor = currentBtn.dataset.color;
+
+});
+document.querySelector("#color-4").addEventListener("click", (eve) => {
+  currentBtn = eve.currentTarget
+ const btnParent = document.querySelector(".new-note");
+ btnParent.style.backgroundColor = currentBtn.dataset.color;
+
 });
