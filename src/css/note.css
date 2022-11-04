@@ -1,8 +1,7 @@
 .added-note{
     width: 280px;
     height: 350px;
-    padding: 25px;
-    border: 2px solid rgb(94, 93, 93);
+    padding: 15px;
     border-radius: 10px;
 }
 .added-note-title{
@@ -14,4 +13,23 @@
     font-size: 16px;
     color: white;
     margin-top: 20px;
+    height: 230px;
+}
+.additional-settings{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+.delete-btn{
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    height: 0px;
+    width: 50px;
+    font-weight: 500;
+    background: none;
+    border: none;
+    color: var(--color3);
 }

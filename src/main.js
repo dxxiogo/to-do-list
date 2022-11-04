@@ -36,8 +36,25 @@ btnAddNote.addEventListener("click", () => {
   newNoteAddedTitle.className = "added-note-title";
   const newNoteAddedText = document.createElement("p");
   newNoteAddedText.innerText = document.querySelector("#text-note").value;
+  const additionalSettingsBox = document.createElement("footer");
+  additionalSettingsBox.className = "additional-settings";
+  const newButtonToDelete = document.createElement("button");
+  newButtonToDelete.innerText = "X";
+  newButtonToDelete.className = "delete-btn";
+  newButtonToDelete.addEventListener('click', () => {
+      notesCreated.removeChild(newNoteAdded);
+  });
+  
+  function viewAdditionalSettings(){
+    newButtonToDelete.style.display = "block";
+    console.log("Deus ajuda ");
+  
+  }
+  newNoteAdded.addEventListener('click', viewAdditionalSettings);
+
+  additionalSettingsBox.append(newButtonToDelete);
   newNoteAddedText.className = "added-note-text";
-  newNoteAdded.append(newNoteAddedTitle, newNoteAddedText);
+  newNoteAdded.append(newNoteAddedTitle, newNoteAddedText, additionalSettingsBox);
   notesCreated.append(newNoteAdded);
   backgroundNewNote.style.display = "none";
   clearInputs();
@@ -69,3 +86,4 @@ document.querySelector("#color-4").addEventListener("click", (eve) => {
  btnParent.style.backgroundColor = currentBtn.dataset.color;
 
 });
+
